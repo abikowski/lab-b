@@ -1,0 +1,13 @@
+<div>
+  <div>List component</div>
+  <div>
+    <input type="text" [(ngModel)]="inputText">
+    <button (click)="inputToArray()">Dodaj element</button>
+  </div>
+  <ul>
+    <li *ngFor="let el of elements; index as i">
+      {{el}}
+      <a href="#" (click)="remove(i)">Usun element</a>
+    </li>
+  </ul>
+</div>
